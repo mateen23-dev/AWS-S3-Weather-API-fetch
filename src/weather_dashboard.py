@@ -11,7 +11,7 @@ load_dotenv()
 class WeatherDashboard:
     def __init__(self):
         self.api_key = os.getenv('OPENWEATHER_API_KEY')
-        self.bucket_name = os.getenv('AWS_BUCKET_NAME')
+        self.bucket_name = os.getenv('aws_bucket_name')
         self.s3_client = boto3.client('s3')
 
     def create_bucket_if_not_exists(self):
